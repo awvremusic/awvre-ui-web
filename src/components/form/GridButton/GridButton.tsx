@@ -1,14 +1,7 @@
-export type GridButtonProps = {
-    onClick: () => void
-    className?: string
-    disabled?: boolean
-    leftComponent?: React.ReactNode
-    rightComponent?: React.ReactNode
-    children: string | React.ReactNode
-    backgroundColor?: string
-}
+import React from "react";
+import { GridButtonProps } from "./GridButton.types"
 
-export const GridButton = ({
+const GridButton: React.FC<GridButtonProps> = ({
     onClick,
     className,
     disabled,
@@ -16,7 +9,7 @@ export const GridButton = ({
     rightComponent,
     children,
     backgroundColor,
-}: GridButtonProps) => {
+}) => {
     return (
         <button
             className={` disabled:bg-gray-500 text-white font-black py-2 px-4 rounded-md ${className ?? ""} grid grid-cols-5 grid-rows-1 gap-4 items-center justify-center w-full`}
@@ -36,3 +29,5 @@ export const GridButton = ({
         </button>
     )
 }
+
+export default GridButton;

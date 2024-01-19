@@ -1,10 +1,7 @@
-export type SpinnerProps = {
-    className?: string
-    width?: number
-    height?: number
-}
+import React from "react";
+import { SpinnerProps } from "./Spinner.types"
 
-export const Spinner = ({ className, width, height }: SpinnerProps) => {
+export const Spinner: React.FC<SpinnerProps> = ({ className, width, height }) => {
     return (
         <div>
             <svg id="Group_10" name="Group 10" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width={width ?? 251.65} height={height ?? 251.65} viewBox="0 0 251.65 251.65" className={className}>

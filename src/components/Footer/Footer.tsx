@@ -1,11 +1,7 @@
+import React from "react";
 import { keyframes, styled } from "styled-components";
 import { AWVRE_GREEN, AWVRE_TAG_IMAGE_URL } from "../../Constants"
-
-export type FooterProps = {
-    text?: string;
-    animationDuration?: number;
-    backgroundColor?: string;
-}
+import { FooterProps } from "./Footer.types";
 
 const backgroundSlideX = keyframes`
 0% {
@@ -56,7 +52,7 @@ export const CustomFooter = styled.footer<FooterProps>`
     }
 `
 
-export const Footer = ({ text = "Made with ❤️ by AWVRE", animationDuration = 750, backgroundColor = AWVRE_GREEN }: FooterProps) => (
+export const Footer: React.FC<FooterProps> = ({ text = "Made with ❤️ by AWVRE", animationDuration = 750, backgroundColor = AWVRE_GREEN }) => (
     <CustomFooter className=" py-10 flex-row-reverse justify-center align-middle" backgroundColor={backgroundColor} animationDuration={animationDuration}>
         <p className="text-center font-bold">{text}</p>
     </CustomFooter>
