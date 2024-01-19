@@ -21,7 +21,7 @@ export const CustomFooter = styled.footer<FooterProps>`
     &::before {
         content: "";
         display: block;
-        background-image: url("${AWVRE_TAG_IMAGE_URL}");
+        background-image: url("${props => props.imageUrl ?? AWVRE_TAG_IMAGE_URL}");
         background-size: cover;
         background-blend-mode: overlay;
         background-color: ${props => props.backgroundColor};
@@ -42,7 +42,7 @@ export const CustomFooter = styled.footer<FooterProps>`
     &::after {
         content: "";
         display: block;
-        background-color: ${AWVRE_GREEN};
+        background-color: ${props => props.backgroundColor};
         z-index: -2;
         position: absolute;
         top: 0;
@@ -52,8 +52,10 @@ export const CustomFooter = styled.footer<FooterProps>`
     }
 `
 
-export const Footer: React.FC<FooterProps> = ({ text = "Made with ❤️ by AWVRE", animationDuration = 750, backgroundColor = AWVRE_GREEN }) => (
+const Footer: React.FC<FooterProps> = ({ text = "Made with ❤️ by AWVRE", animationDuration = 750, backgroundColor = AWVRE_GREEN }) => (
     <CustomFooter className=" py-10 flex-row-reverse justify-center align-middle" backgroundColor={backgroundColor} animationDuration={animationDuration}>
         <p className="text-center font-bold">{text}</p>
     </CustomFooter>
 )
+
+export default Footer;
