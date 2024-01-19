@@ -1,0 +1,8 @@
+{
+  "name": "awvre-shared-components",
+  "version": "1.0.0",
+  "description": "Shared component library for AWVRE based web applications",
+  "main": "index.js",
+  "author": "Bryce DeVaughn (AWVRE)",
+  "private": true
+}
