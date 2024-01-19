@@ -4,4 +4,4 @@ export type FooterProps = {
     backgroundColor?: string;
     imageUrl?: string;
     className?: string;
-}
+};

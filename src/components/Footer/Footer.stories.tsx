@@ -27,6 +27,6 @@ Custom.storyName = "Footer (Custom)";
 Custom.args = {
     text: "Made custom",
     animationDuration: 250,
-    backgroundColor: "red",
+    backgroundColor: "coral",
     imageUrl: "https://media.graphassets.com/NkCteXMwSPWGpAXK3oRI"
 };

@@ -17,6 +17,9 @@ export const CustomFooter = styled.footer<FooterProps>`
     position: relative;
     overflow: hidden;
     width: 100vw;
+    display: flex;
+    flex-flow: row nowarp;
+    justify-content: center;
 
     &::before {
         content: "";
@@ -52,9 +55,16 @@ export const CustomFooter = styled.footer<FooterProps>`
     }
 `
 
-const Footer: React.FC<FooterProps> = ({ text = "Made with ❤️ by AWVRE", animationDuration = 750, backgroundColor = AWVRE_GREEN }) => (
-    <CustomFooter className=" py-10 flex-row-reverse justify-center align-middle" backgroundColor={backgroundColor} animationDuration={animationDuration}>
-        <p className="text-center font-bold">{text}</p>
+const CenteredText = styled.p`
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    padding: 1.5rem;
+`
+
+const Footer: React.FC<FooterProps> = ({ text = "Made with ❤️ by AWVRE", animationDuration = 750, backgroundColor = AWVRE_GREEN, className }) => (
+    <CustomFooter className={`${className ?? ""}`} backgroundColor={backgroundColor} animationDuration={animationDuration}>
+        <CenteredText>{text}</CenteredText>
     </CustomFooter>
 )
 
