@@ -5,6 +5,10 @@
   "main": "index.ts",
   "author": "Bryce DeVaughn (AWVRE)",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awvremusic/awvre-ui-web"
+  },
   "devDependencies": {
     "@types/node": "^20.11.5",
     "@types/react": "^18.2.48",
