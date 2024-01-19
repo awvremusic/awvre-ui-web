@@ -1,8 +1,20 @@
 {
-  "name": "awvre-shared-components",
+  "name": "awvre-ui",
   "version": "1.0.0",
-  "description": "Shared component library for AWVRE based web applications",
-  "main": "index.js",
+  "description": "Shared component and hook library for AWVRE based web applications",
+  "main": "index.ts",
   "author": "Bryce DeVaughn (AWVRE)",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "autoprefixer": "^10.4.17",
+    "eslint": "^8.56.0",
+    "postcss": "^8.4.33",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.1"
+  }
 }
