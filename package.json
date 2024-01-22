@@ -1,6 +1,6 @@
 {
   "name": "awvre-ui-web",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "Shared component and hook library for AWVRE based web applications",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
