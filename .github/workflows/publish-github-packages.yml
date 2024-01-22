@@ -17,8 +17,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: yarn install # will run `yarn install` command
-      - run: yarn build # will run `yarn build:prod` command
+      - run: npm i
+      - run: npm run build
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest
@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: 18
           registry-url: https://npm.pkg.github.com/
-      - run: yarn install
+      - run: npm ci
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

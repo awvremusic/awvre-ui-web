@@ -9,7 +9,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/awvremusic/awvre-ui-web"
+    "url": "git+https://github.com/awvremusic/awvre-ui-web"
   },
   "devDependencies": {
     "@babel/core": "^7.23.7",
