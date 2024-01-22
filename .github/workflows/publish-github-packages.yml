@@ -16,7 +16,7 @@ jobs:
       - name: Install and build
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
       - run: yarn install # will run `yarn install` command
       - run: yarn build # will run `yarn build:prod` command
   publish-gpr:
