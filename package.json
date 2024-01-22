@@ -1,5 +1,5 @@
 {
-  "name": "awvre-ui-web",
+  "name": "@awvremusic/awvre-ui-web",
   "version": "1.0.0",
   "description": "Shared component and hook library for AWVRE based web applications",
   "main": "dist/cjs/index.js",
@@ -7,7 +7,10 @@
   "types": "dist/index.d.ts",
   "author": "Bryce DeVaughn (AWVRE)",
   "private": true,
-  "repository": "https://github.com/awvremusic/awvre-ui-web.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awvremusic/awvre-ui-web.git"
+  },
   "devDependencies": {
     "@babel/core": "^7.23.7",
     "@babel/preset-env": "^7.23.8",
@@ -64,6 +67,6 @@
     "format": "prettier --write \"{src/**/*,.storybook/**/*,.github/**/*}.{js,jsx,ts,tsx,json,css,scss,md,yml}\""
   },
   "publishConfig": {
-    "@awvremusic:registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   }
 }
