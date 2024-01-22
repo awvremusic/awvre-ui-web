@@ -1,6 +1,6 @@
 {
   "name": "awvre-ui-web",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "description": "Shared component and hook library for AWVRE based web applications",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -9,7 +9,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/awvremusic/awvre-ui-web"
+    "url": "git+https://github.com/awvremusic/awvre-ui-web.git"
   },
   "devDependencies": {
     "@babel/core": "^7.23.7",
