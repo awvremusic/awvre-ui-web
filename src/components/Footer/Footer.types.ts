@@ -1,7 +1,7 @@
 export type FooterProps = {
-    text?: string;
-    animationDuration?: number;
-    backgroundColor?: string;
-    imageUrl?: string;
-    className?: string;
-}
+  text?: string;
+  animationDuration?: number;
+  backgroundColor?: string;
+  imageUrl?: string;
+  className?: string;
+};
