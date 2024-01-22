@@ -1,7 +1,7 @@
 import React from "react";
 import { GridButtonProps } from "./GridButton.types";
 
-const GridButton: React.FC<GridButtonProps> = ({
+export const GridButton: React.FC<GridButtonProps> = ({
   onClick,
   className,
   disabled,
@@ -31,5 +31,3 @@ const GridButton: React.FC<GridButtonProps> = ({
     </button>
   );
 };
-
-export default GridButton;

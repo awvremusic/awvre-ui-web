@@ -13,7 +13,7 @@ const backgroundSlideX = keyframes`
   }
 `;
 
-export const CustomFooter = styled.footer<FooterProps>`
+const CustomFooter = styled.footer<FooterProps>`
   position: relative;
   overflow: hidden;
   width: 100vw;
@@ -64,7 +64,7 @@ const CenteredText = styled.p`
   padding: 1.5rem;
 `;
 
-const Footer: React.FC<FooterProps> = ({
+export const Footer: React.FC<FooterProps> = ({
   text = "Made with ❤️ by AWVRE",
   animationDuration = 750,
   backgroundColor = AWVRE_GREEN,
@@ -78,5 +78,3 @@ const Footer: React.FC<FooterProps> = ({
     <CenteredText>{text}</CenteredText>
   </CustomFooter>
 );
-
-export default Footer;

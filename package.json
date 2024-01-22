@@ -1,6 +1,6 @@
 {
   "name": "@awvremusic/awvre-ui-web",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shared component and hook library for AWVRE based web applications",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
