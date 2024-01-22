@@ -69,11 +69,13 @@ export const Footer: React.FC<FooterProps> = ({
   animationDuration = 750,
   backgroundColor = AWVRE_GREEN,
   className,
+  imageUrl,
 }) => (
   <CustomFooter
     className={`${className ?? ""}`}
     backgroundColor={backgroundColor}
     animationDuration={animationDuration}
+    imageUrl={imageUrl}
   >
     <CenteredText>{text}</CenteredText>
   </CustomFooter>

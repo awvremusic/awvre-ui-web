@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import Footer from "./Footer";
+import {Footer} from "./Footer";
 import { AWVRE_GREEN } from "../../Constants";
 
 const meta: Meta<typeof Footer> = {
