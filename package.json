@@ -6,7 +6,6 @@
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "author": "Bryce DeVaughn (AWVRE)",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/awvremusic/awvre-ui-web.git"
