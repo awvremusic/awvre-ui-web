@@ -18,13 +18,9 @@ jobs:
         with:
           node-version: 16
      - name: Install dependencies
-       uses: borales/actions-yarn@v4
-        with:
-          cmd: install # will run `yarn install` command
+        run: yarn install # will run `yarn install` command
       - name: Build production bundle
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: build # will run `yarn build:prod` command
+        run: yarn build # will run `yarn build:prod` command
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest
