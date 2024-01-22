@@ -13,14 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Use Node.js 16.x
+      - name: Install and build
         uses: actions/setup-node@v3
         with:
           node-version: 16
-     - name: Install dependencies
-        run: yarn install # will run `yarn install` command
-      - name: Build production bundle
-        run: yarn build # will run `yarn build:prod` command
+      - run: yarn install # will run `yarn install` command
+      - run: yarn build # will run `yarn build:prod` command
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest
