@@ -1,6 +1,6 @@
 {
   "name": "awvre-ui-web",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "Shared component and hook library for AWVRE based web applications",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -66,5 +66,8 @@
     "test:clear": "npx jest --clearCache",
     "format": "prettier --write \"{src/**/*,.storybook/**/*,.github/**/*}.{js,jsx,ts,tsx,json,css,scss,md,yml}\""
   },
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.0.2",
+  "publishConfig": {
+    "@awvremusic:registry": "https://npm.pkg.github.com"
+  }
 }
