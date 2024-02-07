@@ -1,5 +1,5 @@
-import React from "react";
-import { GridButtonProps } from "./GridButton.types";
+import React from 'react';
+import { GridButtonProps } from './GridButton.types';
 
 export const GridButton: React.FC<GridButtonProps> = ({
   onClick,
@@ -12,10 +12,10 @@ export const GridButton: React.FC<GridButtonProps> = ({
 }) => {
   return (
     <button
-      className={` disabled:bg-gray-500 text-white font-black py-2 px-4 rounded-md ${className ?? ""} grid grid-cols-5 grid-rows-1 gap-4 items-center justify-center w-full`}
+      className={` disabled:bg-gray-500 text-white font-black py-2 px-4 rounded-md ${className ?? ''} grid grid-cols-5 grid-rows-1 gap-4 items-center justify-center w-full`}
       onClick={onClick}
       disabled={disabled}
-      style={{ backgroundColor: backgroundColor ?? "blue" }}
+      style={{ backgroundColor: backgroundColor ?? 'blue' }}
     >
       <span className="col-start-1  col-end-2 row-start-1">
         {leftComponent}

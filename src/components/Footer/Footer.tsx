@@ -1,7 +1,7 @@
-import React from "react";
-import { keyframes, styled } from "styled-components";
-import { AWVRE_GREEN, AWVRE_TAG_IMAGE_URL } from "../../Constants";
-import { FooterProps } from "./Footer.types";
+import React from 'react';
+import { keyframes, styled } from 'styled-components';
+import { AWVRE_GREEN, AWVRE_TAG_IMAGE_URL } from '../../Constants';
+import { FooterProps } from './Footer.types';
 
 const backgroundSlideX = keyframes`
 0% {
@@ -22,10 +22,10 @@ const CustomFooter = styled.footer<FooterProps>`
   justify-content: center;
 
   &::before {
-    content: "";
+    content: '';
     display: block;
-    background-image: url("${(props) =>
-      props.imageUrl ?? AWVRE_TAG_IMAGE_URL}");
+    background-image: url('${(props) =>
+      props.imageUrl ?? AWVRE_TAG_IMAGE_URL}');
     background-size: cover;
     background-blend-mode: overlay;
     background-color: ${(props) => props.backgroundColor};
@@ -45,7 +45,7 @@ const CustomFooter = styled.footer<FooterProps>`
   }
 
   &::after {
-    content: "";
+    content: '';
     display: block;
     background-color: ${(props) => props.backgroundColor};
     z-index: -2;
@@ -65,14 +65,14 @@ const CenteredText = styled.p`
 `;
 
 export const Footer: React.FC<FooterProps> = ({
-  text = "Made with ❤️ by AWVRE",
+  text = 'Made with ❤️ by AWVRE',
   animationDuration = 750,
   backgroundColor = AWVRE_GREEN,
   className,
   imageUrl,
 }) => (
   <CustomFooter
-    className={`${className ?? ""}`}
+    className={`${className ?? ''}`}
     backgroundColor={backgroundColor}
     animationDuration={animationDuration}
     imageUrl={imageUrl}
