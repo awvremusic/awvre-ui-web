@@ -6,4 +6,4 @@ export type GridButtonProps = {
   rightComponent?: React.ReactNode;
   children: string | React.ReactNode;
   backgroundColor?: string;
-};
+} & React.HTMLAttributes<HTMLButtonElement>;

@@ -32,5 +32,5 @@ Custom.args = {
   children: 'Made custom',
   animationDuration: 250,
   backgroundColor: 'coral',
-  imageUrl: 'https://media.graphassets.com/NkCteXMwSPWGpAXK3oRI',
+  imageUrl: 'https://lonelysword.com/images/lonelysword_text.svg',
 };
