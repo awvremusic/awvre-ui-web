@@ -1,7 +1,7 @@
+import React from "react";
+
 export type FooterProps = {
-  text?: string;
   animationDuration?: number;
   backgroundColor?: string;
   imageUrl?: string;
-  className?: string;
-};
+} & React.HTMLAttributes<HTMLDivElement>;

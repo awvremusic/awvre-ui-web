@@ -19,7 +19,7 @@ export const Primary: Story = (args) => (
 );
 Primary.storyName = 'Footer (Default)';
 Primary.args = {
-  text: 'Made with ❤️ by AWVRE',
+  children: <p style={{color: "white", fontWeight: "bold", margin: "auto"}}>Made with ❤️ by AWVRE</p>,
   animationDuration: 750,
   backgroundColor: AWVRE_GREEN,
 };
@@ -29,7 +29,7 @@ export const Custom: Story = (args) => (
 );
 Custom.storyName = 'Footer (Custom)';
 Custom.args = {
-  text: 'Made custom',
+  children: 'Made custom',
   animationDuration: 250,
   backgroundColor: 'coral',
   imageUrl: 'https://media.graphassets.com/NkCteXMwSPWGpAXK3oRI',

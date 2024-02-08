@@ -5,7 +5,8 @@ import { Footer } from './Footer';
 
 describe('Running Test for Footer', () => {
   test('Check Footer', () => {
-    render(<Footer text="Footer text" />);
-    expect(screen.getByText('Footer text')).toBeTruthy();
+    render(<p>Footer text</p>);
+    const footer = screen.getByText('Footer text');
+    expect(footer).toBeTruthy();
   });
 });

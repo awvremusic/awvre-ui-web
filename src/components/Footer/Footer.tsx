@@ -1,82 +1,63 @@
 import React from 'react';
-import { keyframes, styled } from 'styled-components';
 import { AWVRE_GREEN, AWVRE_TAG_IMAGE_URL } from '../../Constants';
 import { FooterProps } from './Footer.types';
-
-const backgroundSlideX = keyframes`
-0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 100% 0;
-  }
-`;
-
-const CustomFooter = styled.footer<FooterProps>`
-  position: relative;
-  overflow: hidden;
-  width: 100vw;
-  display: flex;
-  flex-flow: row nowarp;
-  justify-content: center;
-
-  &::before {
-    content: '';
-    display: block;
-    background-image: url('${(props) =>
-      props.imageUrl ?? AWVRE_TAG_IMAGE_URL}');
-    background-size: cover;
-    background-blend-mode: overlay;
-    background-color: ${(props) => props.backgroundColor};
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 60%;
-    opacity: 0.3;
-    margin: auto;
-    animation: ${backgroundSlideX} ${(props) => props.animationDuration}s linear
-      infinite;
-    transition: background-position 0.5s ease-in-out;
-  }
-
-  &::after {
-    content: '';
-    display: block;
-    background-color: ${(props) => props.backgroundColor};
-    z-index: -2;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-`;
-
-const CenteredText = styled.p`
-  text-align: center;
-  margin: auto;
-  font-weight: bold;
-  padding: 1.5rem;
-`;
+import {motion} from 'framer-motion';
 
 export const Footer: React.FC<FooterProps> = ({
-  text = 'Made with ❤️ by AWVRE',
-  animationDuration = 750,
+  children,
+  animationDuration = 0.75,
   backgroundColor = AWVRE_GREEN,
-  className,
-  imageUrl,
-}) => (
-  <CustomFooter
-    className={`${className ?? ''}`}
-    backgroundColor={backgroundColor}
-    animationDuration={animationDuration}
-    imageUrl={imageUrl}
-  >
-    <CenteredText>{text}</CenteredText>
-  </CustomFooter>
-);
+  className = "",
+  imageUrl = AWVRE_TAG_IMAGE_URL,
+  style,
+  ...other
+}) => {
+  return (
+    <footer {...other} className={`awvre-footer ${className}`} style={{position: "relative", width: "100%", height: "40vh", display: "flex", flexFlow: "row", justifyContent: "center", alignItems: "center",}}>
+      <motion.div
+        className="awvre-footer-image"
+        style={{
+          backgroundImage: `url(${imageUrl})`,
+          backgroundSize: "cover",
+          backgroundBlendMode: "overlay",
+          backgroundColor: backgroundColor,
+          zIndex: -1,
+          position: "absolute",
+          top: 0,
+          bottom: 0,
+          left: 0,
+          right: 0,
+          width: "100%",
+          height: "60%",
+          opacity: 0.3,
+          margin: "auto",
+          transition: "background-position 0.5s ease-in-out",
+        }}
+        animate={{
+          backgroundPosition: "100% 0",
+        }}
+        transition={{
+          duration: animationDuration,
+          repeat: Infinity,
+          repeatType: "loop",
+        }}
+      />
+      <div
+      className={`awvre-footer-background`}
+      style={{
+        backgroundColor: backgroundColor,
+        zIndex: -2,
+        position: "absolute",
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0,
+        display: "block",
+        width: "100%",
+        height: "100%",
+      }}
+      />
+      {children}
+    </footer>
+  )
+}
