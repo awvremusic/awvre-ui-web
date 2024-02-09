@@ -1,7 +1,7 @@
 import { HTMLAttributes } from 'react';
 
-export interface TypographyProps extends HTMLAttributes<HTMLParagraphElement> {
-  variant:
+export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
+  variant?:
     | 'h1'
     | 'h2'
     | 'h3'
@@ -12,6 +12,4 @@ export interface TypographyProps extends HTMLAttributes<HTMLParagraphElement> {
     | 'subtitle2'
     | 'body1'
     | 'body2'
-    | 'caption'
-    | 'overline';
 }

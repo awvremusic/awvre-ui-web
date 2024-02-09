@@ -15,29 +15,33 @@ export const AWVRE_TAG_IMAGE_URL =
   'https://media.graphassets.com/4ADfMh3Q0u78rXBAZoSe';
 
   export const AWVREDarkThemeColors: AWVREThemeColorProperties = {
-    primaryColor: AWVRE_GREEN,
-    secondaryColor: AWVRE_DARKGREEN,
-    warningColor: AWVRE_YELLOW,
-    errorColor: AWVRE_RED,
-    successColor: AWVRE_GREEN,
-    infoColor: AWVRE_BLUE,
-    backgroundColor: AWVRE_BLACK,
-    fontColor: AWVRE_LIGHTGRAY,
+    colors: {
+      primary: AWVRE_GREEN,
+      secondary: AWVRE_DARKGREEN,
+      warning: AWVRE_YELLOW,
+      error: AWVRE_RED,
+      success: AWVRE_GREEN,
+      info: AWVRE_BLUE,
+      background: AWVRE_BLACK,
+      font: AWVRE_LIGHTGRAY,
+    }
   }
 
   export const AWVRELightThemeColors: AWVREThemeColorProperties = {
-    primaryColor: AWVRE_GREEN,
-    secondaryColor: AWVRE_LIGHTGREEN,
-    warningColor: AWVRE_YELLOW,
-    errorColor: AWVRE_RED,
-    successColor: AWVRE_GREEN,
-    infoColor: AWVRE_BLUE,
-    backgroundColor: `linear-gradient(180deg, ${AWVRE_LIGHTGRAY} 0%, #FFFFFF 100%)`,
-    fontColor: AWVRE_BLACK,
+    colors: {
+      primary: AWVRE_GREEN,
+      secondary: AWVRE_LIGHTGREEN,
+      warning: AWVRE_YELLOW,
+      error: AWVRE_RED,
+      success: AWVRE_GREEN,
+      info: AWVRE_BLUE,
+      background: `linear-gradient(180deg, ${AWVRE_LIGHTGRAY} 0%, #FFFFFF 100%)`,
+      font: AWVRE_BLACK,
+    }
   }
 
   export const AWVRESpacingProps: AWVREThemeSpacingProperties = {
-    gap: {
+    spacing: {
       xs: "0.5rem",
       sm: "1rem",
       md: "1.5rem",
@@ -63,11 +67,12 @@ export const AWVREFontProps = {
   fontSizes: {
     xs: "0.75rem",
     sm: "0.875rem",
-    md: "1rem",
-    lg: "1.125rem",
-    xl: "1.25rem",
-    xxl: "1.5rem",
-    xxxl: "2rem",
+    base: "1rem",
+    md: "1.125rem",
+    lg: "1.25rem",
+    xl: "1.5rem",
+    xxl: "2rem",
+    xxxl: "3rem",
   },
   fontWeights: {
     light: 300,

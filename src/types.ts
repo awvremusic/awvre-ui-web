@@ -1,5 +1,5 @@
 export interface AWVREThemeSpacingProperties {
-    gap: {
+    spacing: {
         xs: string | number;
         sm: string | number;
         md: string | number;
@@ -25,6 +25,7 @@ export interface AWVREThemeFontProperties {
     fontSizes: {
         xs: string | number;
         sm: string | number;
+        base: string | number;
         md: string | number;
         lg: string | number;
         xl: string | number;
@@ -42,14 +43,16 @@ export interface AWVREThemeFontProperties {
 }
 
 export interface AWVREThemeColorProperties {
-    primaryColor: string;
-    secondaryColor: string;
-    warningColor: string;
-    errorColor: string;
-    successColor: string;
-    infoColor: string;
-    backgroundColor: string;
-    fontColor: string;
+    colors: {
+        primary: string;
+        secondary: string;
+        warning: string;
+        error: string;
+        success: string;
+        info: string;
+        background: string;
+        font: string;
+    }
 }
 
 
