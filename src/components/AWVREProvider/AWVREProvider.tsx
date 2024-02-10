@@ -1,7 +1,7 @@
 import React from "react";
 import { AWVREThemeProperties } from "../../types";
 import { AWVREProviderProps } from "./AWVREProvider.types";
-import { AWVRELightTheme } from "../../Constants";
+import { AWVREDarkTheme, AWVRELightTheme } from "../../Constants";
 import { usePrefersColorScheme } from "../../hooks";
 import { styled } from "styled-components";
 
@@ -24,6 +24,8 @@ type StyledWrapperProps = {
         display: flex;
         flex-direction: column;
         background: ${({ $theme }) => $theme.colors.background};
+        color: ${({ $theme }) => $theme.colors.font};
+        font-family: ${({ $theme }) => $theme.fontFamily};
     `;
 
 export const AWVREProvider: React.FC<AWVREProviderProps> = ({
@@ -32,10 +34,10 @@ export const AWVREProvider: React.FC<AWVREProviderProps> = ({
     initialThemeMode = "system",
 }) => {
     const userPreferredColorScheme = usePrefersColorScheme();
-    const [themeMode, setThemeMode] = React.useState<"light" | "dark" | "system">(initialThemeMode === "system" ? userPreferredColorScheme : initialThemeMode);
+    const [themeMode, setThemeMode] = React.useState<"light" | "dark" | "system">(initialThemeMode === "system" ? userPreferredColorScheme : "light");
 
     const lightTheme = customTheme?.light ?? AWVRELightTheme;
-    const darkTheme = customTheme?.dark ?? AWVRELightTheme;
+    const darkTheme = customTheme && !customTheme.dark ? lightTheme : AWVREDarkTheme;
 
     const theme = themeMode === "light" ? lightTheme : darkTheme;
 

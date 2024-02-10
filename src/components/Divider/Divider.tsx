@@ -1,6 +1,6 @@
 import React from 'react'
 import { DividerProps } from "./Divider.types";
-import { AWVRE_GRAY } from '../../Constants';
+import { useAWVRETheme } from '../AWVREProvider';
 
 export const Divider = (props: DividerProps) => {
     const {
@@ -9,10 +9,12 @@ export const Divider = (props: DividerProps) => {
         ...other
     } = props;
 
+    const { theme } = useAWVRETheme();
+
     return (
         <hr
             className={`divider ${className}`}
-            style={{ height: 1, backgroundColor: AWVRE_GRAY, border: "none", ...style}}
+            style={{ width: "100%", height: 1, backgroundColor: theme.colors.font, opacity: 0.15, border: "none", marginTop: theme.spacing.sm, marginBottom: theme.spacing.sm, ...style}}
             {...other}
         />
     );

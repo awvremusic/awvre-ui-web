@@ -5,6 +5,6 @@ export interface AWVREProviderProps {
     initialThemeMode?: "light" | "dark" | "system";
     customTheme?: {
         light: AWVREThemeProperties;
-        dark: AWVREThemeProperties;
+        dark?: AWVREThemeProperties;
     };
 }
