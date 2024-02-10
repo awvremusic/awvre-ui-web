@@ -11,5 +11,5 @@ export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
     | 'subtitle1'
     | 'subtitle2'
     | 'body1'
-    | 'body2'
+    | 'body2';
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import {ScrollingTextBanner} from './ScrollingTextBanner';
+import { ScrollingTextBanner } from './ScrollingTextBanner';
 
 const meta: Meta<typeof ScrollingTextBanner> = {
   title: 'AWVRE-UI/ScrollingTextBanner',
@@ -18,12 +18,12 @@ export const Primary: Story = (args) => (
 );
 Primary.storyName = 'ScrollingTextBanner (Default)';
 Primary.args = {
-  text: "AWVRE has made some new clothes for you to wear! Check them out now! 🎉",
-  textColor: "white",
-  fontFamily: "Arial",
-  fontSize: "12pt",
-  fontWeight: "bold",
-  height: "10vh",
+  text: 'AWVRE has made some new clothes for you to wear! Check them out now! 🎉',
+  textColor: 'white',
+  fontFamily: 'Arial',
+  fontSize: '12pt',
+  fontWeight: 'bold',
+  height: '10vh',
   animationDuration: 50,
-  backgroundColor: "black",
+  backgroundColor: 'black',
 };

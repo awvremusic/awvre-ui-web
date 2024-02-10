@@ -1,1 +1,2 @@
-export interface DividerProps extends React.HtmlHTMLAttributes<HTMLSpanElement> {}
+export interface DividerProps
+  extends React.HtmlHTMLAttributes<HTMLSpanElement> {}

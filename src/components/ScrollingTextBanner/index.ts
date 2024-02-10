@@ -1,1 +1,1 @@
-export * from './ScrollingTextBanner'
+export * from './ScrollingTextBanner';

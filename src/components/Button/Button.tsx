@@ -5,8 +5,8 @@ import { styled } from 'styled-components';
 import { useAWVRETheme } from '../AWVREProvider';
 
 type StyledGridButtonProps = {
-  $theme: AWVREThemeProperties
-}
+  $theme: AWVREThemeProperties;
+};
 
 const StyledGridButton = styled.button<StyledGridButtonProps>`
   display: grid;
@@ -14,7 +14,8 @@ const StyledGridButton = styled.button<StyledGridButtonProps>`
   gap: ${({ $theme }) => $theme.spacing.sm};
   justify-content: center;
   align-items: center;
-  padding: ${({ $theme }) => $theme.spacing.md} ${({ $theme }) => $theme.spacing.sm};
+  padding: ${({ $theme }) => $theme.spacing.md}
+    ${({ $theme }) => $theme.spacing.sm};
   border-radius: ${({ $theme }) => $theme.borderRadius.sm};
   background-color: ${({ $theme }) => $theme.colors.primary};
   color: white;
@@ -50,19 +51,29 @@ export const Button: React.FC<ButtonProps> = ({
       onClick={onClick}
     >
       <span
-      className="awvre-button_left-item"
-      style={{gridColumnStart: 1, gridColumnEnd: 2, gridRowStart: 1 }}>
+        className="awvre-button_left-item"
+        style={{ gridColumnStart: 1, gridColumnEnd: 2, gridRowStart: 1 }}
+      >
         {leftComponent}
       </span>
       <span
         className={`awvre-button_center-item`}
-        style={{gridColumnStart: 2, gridColumnEnd: 5, gridRowStart: 1, display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}
+        style={{
+          gridColumnStart: 2,
+          gridColumnEnd: 5,
+          gridRowStart: 1,
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
       >
         {children}
       </span>
       <span
-        className='awvre-button_right-item'
-        style={{gridColumnStart: 5, gridColumnEnd: 6, gridRowStart: 1 }}>
+        className="awvre-button_right-item"
+        style={{ gridColumnStart: 5, gridColumnEnd: 6, gridRowStart: 1 }}
+      >
         {rightComponent}
       </span>
     </StyledGridButton>

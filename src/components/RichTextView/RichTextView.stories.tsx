@@ -39,5 +39,5 @@ Primary.args = {
           tempor incididunt ut labore et dolore magna aliqua.
         </p>
       </div>
-  `
+  `,
 };

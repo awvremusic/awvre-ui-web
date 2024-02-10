@@ -65,38 +65,49 @@ export const Text = (props: TextProps) => {
     case 'subtitle1':
       Component = {
         component: 'p',
-        style: {fontSize: theme.fontSizes.sm, fontWeight: theme.fontWeights.bold},
+        style: {
+          fontSize: theme.fontSizes.sm,
+          fontWeight: theme.fontWeights.bold,
+        },
       };
       break;
     case 'subtitle2':
       Component = {
         component: 'p',
-        style: {fontSize: theme.fontSizes.xs, fontWeight: theme.fontWeights.bold},
+        style: {
+          fontSize: theme.fontSizes.xs,
+          fontWeight: theme.fontWeights.bold,
+        },
       };
       break;
     case 'body1':
       Component = {
         component: 'p',
-        style: {fontSize: theme.fontSizes.base},
+        style: { fontSize: theme.fontSizes.base },
       };
       break;
     case 'body2':
       Component = {
         component: 'p',
-        style: {fontSize: theme.fontSizes.sm},
+        style: { fontSize: theme.fontSizes.sm },
       };
       break;
-      default:
-        Component = {
-          component: 'p',
-          style: {fontSize: theme.fontSizes.base},
-        };
-    }
+    default:
+      Component = {
+        component: 'p',
+        style: { fontSize: theme.fontSizes.base },
+      };
+  }
 
   return React.createElement(Component.component, {
     children,
     className: `awvre-text ${other.className ?? ''}`,
-    style: {...Component.style, margin: 0, fontFamily: theme.fontFamily,...other.style},
-    ...other
+    style: {
+      ...Component.style,
+      margin: 0,
+      fontFamily: theme.fontFamily,
+      ...other.style,
+    },
+    ...other,
   });
 };

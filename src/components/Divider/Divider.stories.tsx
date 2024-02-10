@@ -1,13 +1,13 @@
-import React from "react";
-import { Meta, StoryObj } from "@storybook/react";
-import { Divider } from "./Divider";
-import { AWVREProvider } from "../AWVREProvider";
+import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
+import { Divider } from './Divider';
+import { AWVREProvider } from '../AWVREProvider';
 
 const meta: Meta<typeof Divider> = {
-    title: 'AWVRE-UI/Divider',
-    component: Divider,
-    argTypes: {},
-    tags: ['Divider', 'AWVRE-UI', 'autodocs'],
+  title: 'AWVRE-UI/Divider',
+  component: Divider,
+  argTypes: {},
+  tags: ['Divider', 'AWVRE-UI', 'autodocs'],
 };
 
 export default meta;
@@ -15,9 +15,9 @@ export default meta;
 type Story = StoryObj<typeof Divider>;
 
 export const Primary: Story = (args) => (
-    <AWVREProvider>
-        <Divider data-testId="Divider-id" {...args} />
-    </AWVREProvider>
+  <AWVREProvider>
+    <Divider data-testId="Divider-id" {...args} />
+  </AWVREProvider>
 );
 
 Primary.storyName = 'Divider (Default)';

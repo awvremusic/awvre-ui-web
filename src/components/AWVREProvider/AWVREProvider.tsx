@@ -1,65 +1,71 @@
-import React from "react";
-import { AWVREThemeProperties } from "../../types";
-import { AWVREProviderProps } from "./AWVREProvider.types";
-import { AWVREDarkTheme, AWVRELightTheme } from "../../Constants";
-import { usePrefersColorScheme } from "../../hooks";
-import { styled } from "styled-components";
+import React from 'react';
+import { AWVREThemeProperties } from '../../types';
+import { AWVREProviderProps } from './AWVREProvider.types';
+import { AWVREDarkTheme, AWVRELightTheme } from '../../Constants';
+import { usePrefersColorScheme } from '../../hooks';
+import { styled } from 'styled-components';
 
 type AWVREThemeContextProperties = {
-    theme: AWVREThemeProperties;
-    mode: "light" | "dark" | "system";
-}
+  theme: AWVREThemeProperties;
+  mode: 'light' | 'dark' | 'system';
+};
 
 type AWVREThemeContextFunctions = {
-    setThemeMode: (mode: "light" | "dark" | "system") => void;
-}
+  setThemeMode: (mode: 'light' | 'dark' | 'system') => void;
+};
 
-const awvreThemeContext = React.createContext<(AWVREThemeContextProperties & AWVREThemeContextFunctions) | undefined>(undefined);
+const awvreThemeContext = React.createContext<
+  (AWVREThemeContextProperties & AWVREThemeContextFunctions) | undefined
+>(undefined);
 
 type StyledWrapperProps = {
-    $theme: AWVREThemeProperties;
-}
+  $theme: AWVREThemeProperties;
+};
 
-    const StyledWrapper = styled.main<StyledWrapperProps>`
-        display: flex;
-        flex-direction: column;
-        background: ${({ $theme }) => $theme.colors.background};
-        color: ${({ $theme }) => $theme.colors.font};
-        font-family: ${({ $theme }) => $theme.fontFamily};
-    `;
+const StyledWrapper = styled.main<StyledWrapperProps>`
+  display: flex;
+  flex-direction: column;
+  background: ${({ $theme }) => $theme.colors.background};
+  color: ${({ $theme }) => $theme.colors.font};
+  font-family: ${({ $theme }) => $theme.fontFamily};
+`;
 
 export const AWVREProvider: React.FC<AWVREProviderProps> = ({
-    children,
-    customTheme,
-    initialThemeMode = "system",
+  children,
+  customTheme,
+  initialThemeMode = 'system',
 }) => {
-    const userPreferredColorScheme = usePrefersColorScheme();
-    const [themeMode, setThemeMode] = React.useState<"light" | "dark" | "system">(initialThemeMode === "system" ? userPreferredColorScheme : "light");
+  const userPreferredColorScheme = usePrefersColorScheme();
+  const [themeMode, setThemeMode] = React.useState<'light' | 'dark' | 'system'>(
+    initialThemeMode === 'system' ? userPreferredColorScheme : 'light'
+  );
 
-    const lightTheme = customTheme?.light ?? AWVRELightTheme;
-    const darkTheme = customTheme && !customTheme.dark ? lightTheme : AWVREDarkTheme;
+  const lightTheme = customTheme?.light ?? AWVRELightTheme;
+  const darkTheme =
+    customTheme && !customTheme.dark ? lightTheme : AWVREDarkTheme;
 
-    const theme = themeMode === "light" ? lightTheme : darkTheme;
+  const theme = themeMode === 'light' ? lightTheme : darkTheme;
 
-    return (
-        <awvreThemeContext.Provider value={{
-            theme,
-            mode: themeMode,
-            setThemeMode,
-        }}>
-            <StyledWrapper $theme={theme} className="awvre-wrapper">
-            {children}
-            </StyledWrapper>
-        </awvreThemeContext.Provider>
-    )
-}
+  return (
+    <awvreThemeContext.Provider
+      value={{
+        theme,
+        mode: themeMode,
+        setThemeMode,
+      }}
+    >
+      <StyledWrapper $theme={theme} className="awvre-wrapper">
+        {children}
+      </StyledWrapper>
+    </awvreThemeContext.Provider>
+  );
+};
 
 export function useAWVRETheme() {
-    const context = React.useContext(awvreThemeContext);
-    if (context === undefined) {
-        throw new Error('This component must be used within an AWVREProvider');
-    }
-    
-    return context;
-}
+  const context = React.useContext(awvreThemeContext);
+  if (context === undefined) {
+    throw new Error('This component must be used within an AWVREProvider');
+  }
 
+  return context;
+}

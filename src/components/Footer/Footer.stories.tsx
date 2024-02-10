@@ -19,7 +19,11 @@ export const Primary: Story = (args) => (
 );
 Primary.storyName = 'Footer (Default)';
 Primary.args = {
-  children: <p style={{color: "white", fontWeight: "bold", margin: "auto"}}>Made with ❤️ by AWVRE</p>,
+  children: (
+    <p style={{ color: 'white', fontWeight: 'bold', margin: 'auto' }}>
+      Made with ❤️ by AWVRE
+    </p>
+  ),
   animationDuration: 750,
   backgroundColor: AWVRE_GREEN,
 };
