@@ -53,6 +53,15 @@ export interface AWVREThemeColorProperties {
         background: string;
         font: string;
     }
+    extraColors?: {
+        purple: string;
+        pink: string;
+        teal: string;
+        orange: string;
+        lightGray: string;
+        gray: string;
+        black: string;
+    }
 }
 
 

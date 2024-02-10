@@ -3,6 +3,7 @@ import { AWVREThemeProperties } from "../../types";
 import { AWVREProviderProps } from "./AWVREProvider.types";
 import { AWVRELightTheme } from "../../Constants";
 import { usePrefersColorScheme } from "../../hooks";
+import { styled } from "styled-components";
 
 type AWVREThemeContextProperties = {
     theme: AWVREThemeProperties;
@@ -14,6 +15,16 @@ type AWVREThemeContextFunctions = {
 }
 
 const awvreThemeContext = React.createContext<(AWVREThemeContextProperties & AWVREThemeContextFunctions) | undefined>(undefined);
+
+type StyledWrapperProps = {
+    $theme: AWVREThemeProperties;
+}
+
+    const StyledWrapper = styled.main<StyledWrapperProps>`
+        display: flex;
+        flex-direction: column;
+        background: ${({ $theme }) => $theme.colors.background};
+    `;
 
 export const AWVREProvider: React.FC<AWVREProviderProps> = ({
     children,
@@ -34,7 +45,9 @@ export const AWVREProvider: React.FC<AWVREProviderProps> = ({
             mode: themeMode,
             setThemeMode,
         }}>
+            <StyledWrapper $theme={theme} className="awvre-wrapper">
             {children}
+            </StyledWrapper>
         </awvreThemeContext.Provider>
     )
 }

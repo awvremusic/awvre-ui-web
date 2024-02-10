@@ -14,8 +14,6 @@ export const Text = (props: TextProps) => {
         style: {
           fontSize: theme.fontSizes.xxxl,
           fontWeight: theme.fontWeights.bold,
-          marginTop: theme.spacing.md,
-          marginBottom: theme.spacing.md
         },
       };
       break;
@@ -25,8 +23,6 @@ export const Text = (props: TextProps) => {
         style: {
           fontSize: theme.fontSizes.xxl,
           fontWeight: theme.fontWeights.bold,
-          marginTop: theme.spacing.md,
-          marginBottom: theme.spacing.md
         },
       };
       break;
@@ -36,8 +32,6 @@ export const Text = (props: TextProps) => {
         style: {
           fontSize: theme.fontSizes.xl,
           fontWeight: theme.fontWeights.bold,
-          marginTop: theme.spacing.md,
-          marginBottom: theme.spacing.md
         },
       };
       break;
@@ -47,8 +41,6 @@ export const Text = (props: TextProps) => {
         style: {
           fontSize: theme.fontSizes.lg,
           fontWeight: theme.fontWeights.bold,
-          marginTop: theme.spacing.md,
-          marginBottom: theme.spacing.md
         },
       };
       break;
@@ -58,8 +50,6 @@ export const Text = (props: TextProps) => {
         style: {
           fontSize: theme.fontSizes.md,
           fontWeight: theme.fontWeights.bold,
-          marginTop: theme.spacing.md,
-          marginBottom: theme.spacing.md
         },
       };
       break;
@@ -69,8 +59,6 @@ export const Text = (props: TextProps) => {
         style: {
           fontSize: theme.fontSizes.base,
           fontWeight: theme.fontWeights.bold,
-          marginTop: theme.spacing.md,
-          marginBottom: theme.spacing.md
         },
       };
       break;
@@ -108,7 +96,7 @@ export const Text = (props: TextProps) => {
   return React.createElement(Component.component, {
     children,
     className: `awvre-text ${other.className ?? ''}`,
-    style: {...Component.style,...other.style},
+    style: {...Component.style, margin: 0, fontFamily: theme.fontFamily,...other.style},
     ...other
   });
 };

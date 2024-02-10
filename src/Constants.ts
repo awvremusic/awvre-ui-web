@@ -9,8 +9,10 @@ export const AWVRE_BLUE = "#419EFA";
 export const AWVRE_PURPLE = "#AA41FA";
 export const AWVRE_PINK = "#FA41B0";
 export const AWVRE_ORANGE = "#FA7A41";
-export const AWVRE_LIGHTGRAY = "#F7F7F7";
+export const AWVRE_LIGHTGRAY = "#FAFAFA";
+export const AWVRE_GRAY = "#F0F0F0";
 export const AWVRE_BLACK = "#161616";
+export const AWVRE_TEAL = "#41FABB";
 export const AWVRE_TAG_IMAGE_URL =
   'https://media.graphassets.com/4ADfMh3Q0u78rXBAZoSe';
 
@@ -24,6 +26,15 @@ export const AWVRE_TAG_IMAGE_URL =
       info: AWVRE_BLUE,
       background: AWVRE_BLACK,
       font: AWVRE_LIGHTGRAY,
+    },
+    extraColors: {
+      purple: AWVRE_PURPLE,
+      pink: AWVRE_PINK,
+      orange: AWVRE_ORANGE,
+      lightGray: AWVRE_LIGHTGRAY,
+      gray: AWVRE_GRAY,
+      black: AWVRE_BLACK,
+      teal: AWVRE_TEAL,
     }
   }
 
@@ -35,8 +46,17 @@ export const AWVRE_TAG_IMAGE_URL =
       error: AWVRE_RED,
       success: AWVRE_GREEN,
       info: AWVRE_BLUE,
-      background: `linear-gradient(180deg, ${AWVRE_LIGHTGRAY} 0%, #FFFFFF 100%)`,
+      background: `linear-gradient(0deg, ${AWVRE_LIGHTGRAY} 0%, #FFFFFF 100%)`,
       font: AWVRE_BLACK,
+    },
+    extraColors: {
+      purple: AWVRE_PURPLE,
+      pink: AWVRE_PINK,
+      orange: AWVRE_ORANGE,
+      lightGray: AWVRE_LIGHTGRAY,
+      gray: AWVRE_GRAY,
+      black: AWVRE_BLACK,
+      teal: AWVRE_TEAL,
     }
   }
 
