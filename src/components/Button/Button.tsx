@@ -1,5 +1,5 @@
 import React from 'react';
-import { GridButtonProps } from './GridButton.types';
+import { ButtonProps } from './Button.types';
 import { AWVREThemeProperties } from '../../types';
 import { styled } from 'styled-components';
 import { useAWVRETheme } from '../AWVREProvider';
@@ -8,14 +8,14 @@ type StyledGridButtonProps = {
   $theme: AWVREThemeProperties
 }
 
-export const StyledGridButton = styled.button<StyledGridButtonProps>`
+const StyledGridButton = styled.button<StyledGridButtonProps>`
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   gap: ${({ $theme }) => $theme.spacing.sm};
   justify-content: center;
   align-items: center;
-  padding: ${({ $theme }) => $theme.spacing.sm} ${({ $theme }) => $theme.spacing.sm};
-  border-radius: ${({ $theme }) => $theme.borderRadius.md};
+  padding: ${({ $theme }) => $theme.spacing.md} ${({ $theme }) => $theme.spacing.sm};
+  border-radius: ${({ $theme }) => $theme.borderRadius.sm};
   background-color: ${({ $theme }) => $theme.colors.primary};
   color: white;
   font-weight: ${({ $theme }) => $theme.fontWeights.bold};
@@ -33,7 +33,7 @@ export const StyledGridButton = styled.button<StyledGridButtonProps>`
   }
 `;
 
-export const GridButton: React.FC<GridButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   onClick,
   className,
   leftComponent,

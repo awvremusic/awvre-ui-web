@@ -11,6 +11,7 @@ export const AWVRE_PINK = "#FA41B0";
 export const AWVRE_ORANGE = "#FA7A41";
 export const AWVRE_LIGHTGRAY = "#FAFAFA";
 export const AWVRE_GRAY = "#F0F0F0";
+export const AWVRE_DARKGRAY = "#202020";
 export const AWVRE_BLACK = "#161616";
 export const AWVRE_TEAL = "#41FABB";
 export const AWVRE_TAG_IMAGE_URL =
@@ -25,6 +26,7 @@ export const AWVRE_TAG_IMAGE_URL =
       success: AWVRE_GREEN,
       info: AWVRE_BLUE,
       background: AWVRE_BLACK,
+      container: AWVRE_DARKGRAY,
       font: AWVRE_LIGHTGRAY,
     },
     extraColors: {
@@ -47,6 +49,7 @@ export const AWVRE_TAG_IMAGE_URL =
       success: AWVRE_GREEN,
       info: AWVRE_BLUE,
       background: `linear-gradient(0deg, ${AWVRE_LIGHTGRAY} 0%, #FFFFFF 100%)`,
+      container: "#FFFFFF",
       font: AWVRE_BLACK,
     },
     extraColors: {
@@ -62,13 +65,13 @@ export const AWVRE_TAG_IMAGE_URL =
 
   export const AWVRESpacingProps: AWVREThemeSpacingProperties = {
     spacing: {
-      xs: "0.5rem",
-      sm: "1rem",
-      md: "1.5rem",
-      lg: "2rem",
-      xl: "2.5rem",
-      xxl: "3rem",
-      xxxl: "4rem",
+      xs: "0.15rem",
+      sm: "0.25rem",
+      md: ".5rem",
+      lg: "1rem",
+      xl: "1.5rem",
+      xxl: "2rem",
+      xxxl: "2.5rem",
     },
     borderRadius: {
       xs: "0.25rem",
@@ -77,7 +80,7 @@ export const AWVRE_TAG_IMAGE_URL =
       lg: "1rem",
       xl: "1.5rem",
       xxl: "2rem",
-      xxxl: "3rem",
+      xxxl: "2.5rem",
       full: "9999px",
     },
 }
@@ -85,14 +88,14 @@ export const AWVRE_TAG_IMAGE_URL =
 export const AWVREFontProps = {
   fontFamily: "Noto Sans JP, Noto Sans, Inter, Calibri, Arial, sans-serif",
   fontSizes: {
-    xs: "0.75rem",
-    sm: "0.875rem",
+    xs: "0.5rem",
+    sm: "0.75rem",
     base: "1rem",
     md: "1.125rem",
     lg: "1.25rem",
     xl: "1.5rem",
     xxl: "2rem",
-    xxxl: "3rem",
+    xxxl: "2.5rem",
   },
   fontWeights: {
     light: 300,

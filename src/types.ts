@@ -52,6 +52,7 @@ export interface AWVREThemeColorProperties {
         info: string;
         background: string;
         font: string;
+        container: string;
     }
     extraColors?: {
         purple: string;

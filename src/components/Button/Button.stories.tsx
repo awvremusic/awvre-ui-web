@@ -1,11 +1,11 @@
 import { Meta } from "@storybook/react";
 import React from "react";
 import { AWVREProvider } from "../AWVREProvider";
-import { GridButton } from "./GridButton";
+import { Button } from "./Button";
 
-const meta: Meta<typeof GridButton> = {
+const meta: Meta<typeof Button> = {
     title: 'AWVRE-UI/GridButton',
-    component: GridButton,
+    component: Button,
     argTypes: {},
     tags: ['GridButton', 'AWVRE-UI', 'autodocs'],
 };
@@ -16,7 +16,7 @@ const testOnClick = () => console.log('Button Clicked');
 
 export const Primary = (args) => (
     <AWVREProvider>
-        <GridButton data-testId="GridButton-id" {...args} />
+        <Button data-testId="GridButton-id" {...args} />
     </AWVREProvider>
 );
 
@@ -30,7 +30,7 @@ Primary.args = {
 
 export const Disabled = (args) => (
     <AWVREProvider>
-        <GridButton data-testId="GridButton-id" {...args} />
+        <Button data-testId="GridButton-id" {...args} />
     </AWVREProvider>
 );
 
