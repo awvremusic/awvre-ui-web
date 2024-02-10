@@ -21,7 +21,11 @@ export interface AWVREThemeSpacingProperties {
 }
 
 export interface AWVREThemeFontProperties {
-    fontFamily: string;
+    fontFamily: {
+        sansSerif: string;
+        serif: string;
+        monospace: string;
+    }
     fontSizes: {
         xs: string | number;
         sm: string | number;

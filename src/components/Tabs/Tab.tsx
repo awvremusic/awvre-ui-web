@@ -18,7 +18,13 @@ const StyledTab = styled.div<StyledTabProps>`
     justify-content: start;
     align-items: center;
     position: relative;
-    padding: ${({ $theme }) => $theme.spacing.xs};
+    padding: ${({ $theme }) => $theme.spacing.md};
+    font-weight: ${({ $theme }) => $theme.fontWeights.semibold};
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        color: ${({ $theme }) => $theme.colors.primary};
+    }
 `
 
 const StyledTabIndicator = styled.span<StyledTabProps>`
