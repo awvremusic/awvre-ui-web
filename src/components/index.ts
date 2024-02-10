@@ -4,3 +4,4 @@ export * from './form/GridButton';
 export * from './RichTextView';
 export * from './Text';
 export * from './ScrollingTextBanner';
+export * from './ExternalLink';
