@@ -63,7 +63,7 @@ export const AWVRE_TAG_IMAGE_URL =
 }
 
 export const AWVREFontProps = {
-  fontFamily: "Arial, sans-serif",
+  fontFamily: "Noto Sans JP, Noto Sans, Inter, Calibri, Arial, sans-serif",
   fontSizes: {
     xs: "0.75rem",
     sm: "0.875rem",
