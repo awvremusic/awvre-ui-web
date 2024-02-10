@@ -1,13 +1,8 @@
 import React, { createContext, useContext, useState } from "react";
-import { TabProps } from "./Tab.types";
+import { TabProps, TabsProps } from "./Tab.types";
 import { AWVREThemeProperties } from "../../types";
 import { styled } from "styled-components";
 import { useAWVRETheme } from "../AWVREProvider";
-
-type TabsProps = {
-    children: React.ReactElement<TabProps> | Array<React.ReactElement<TabProps>>;
-    initialTab?: number | string;
-} & React.HTMLAttributes<HTMLDivElement>;
 
 type TabsContextType = {
     onTabPress: (value: number | string) => void;
@@ -28,7 +23,7 @@ const StyledTabsWrapper = styled.div<StyledTabsWrapperProps>`
     align-items: center;
 `;
 
-export const Tabs = ({ children, initialTab }: TabsProps) => {
+export const Tabs = ({ children, initialTab, className = "", ...other }: TabsProps) => {
     const { theme } = useAWVRETheme();
     const [activeTab, setActiveTab] = useState<string | number>(initialTab ?? 0);
 
@@ -38,7 +33,7 @@ export const Tabs = ({ children, initialTab }: TabsProps) => {
 
     return (
         <tabsContext.Provider value={{ onTabPress, activeTab }}>
-            <StyledTabsWrapper $theme={theme}>
+            <StyledTabsWrapper $theme={theme} className={`awvre-tabs ${className}`} {...other}>
                 {children}
             </StyledTabsWrapper>
         </tabsContext.Provider>

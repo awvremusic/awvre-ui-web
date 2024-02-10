@@ -6,3 +6,8 @@ export interface TabProps extends React.HTMLAttributes<HTMLDivElement> {
     indicatorClassName?: string;
     indicatorStyle?: React.CSSProperties;
 }
+
+export interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
+    children: React.ReactElement<TabProps> | Array<React.ReactElement<TabProps>>;
+    initialTab?: number | string;
+}

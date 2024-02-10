@@ -4,14 +4,16 @@ import { ExternalLinkProps } from "./ExternalLink.types";
 export const ExternalLink: React.FC<ExternalLinkProps> = ({
     children,
     href,
+    className = "",
     ...props
 }) => {
     return (
         <a
+            {...props}
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            {...props}
+            className={`awvre-external-link ${className}`}
         >
             {children}
         </a>

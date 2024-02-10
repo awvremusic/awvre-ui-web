@@ -48,7 +48,7 @@ export const Drawer = (props: DrawerProps) => {
 
     return (
         <div
-            className={`drawer-container`}
+            className={`awvre-drawer`}
             style={{
                 backgroundColor: open ? "rgba(0, 0, 0, 0.5)" : "rgba(0, 0, 0, 0)",
                 transition: "all 0.3s ease-in-out",

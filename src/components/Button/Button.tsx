@@ -46,22 +46,22 @@ export const Button: React.FC<ButtonProps> = ({
     <StyledGridButton
       $theme={theme}
       {...other}
-      className={`grid-button ${className ?? ''}`}
+      className={`awvre-button ${className ?? ''}`}
       onClick={onClick}
     >
       <span
-      className="grid-button_left-item"
+      className="awvre-button_left-item"
       style={{gridColumnStart: 1, gridColumnEnd: 2, gridRowStart: 1 }}>
         {leftComponent}
       </span>
       <span
-        className={`grid-button_center-item`}
+        className={`awvre-button_center-item`}
         style={{gridColumnStart: 2, gridColumnEnd: 5, gridRowStart: 1, display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}
       >
         {children}
       </span>
       <span
-        className='grid-button_right-item'
+        className='awvre-button_right-item'
         style={{gridColumnStart: 5, gridColumnEnd: 6, gridRowStart: 1 }}>
         {rightComponent}
       </span>

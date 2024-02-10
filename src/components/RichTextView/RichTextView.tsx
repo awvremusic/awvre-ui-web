@@ -47,7 +47,7 @@ export const RichTextView = (props: RichTextViewProps) => {
     <RichTextDiv
       $customTheme={theme}
       {...other}
-      className={`my-4 ${className ?? ''}`}
+      className={`awvre-rich-text-view ${className ?? ''}`}
       dangerouslySetInnerHTML={{ __html: innerHtml }}
     />
   );

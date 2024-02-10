@@ -33,7 +33,7 @@ export const ScrollingTextBanner: React.FC<ScrollingTextBannerProps> = ({
     ...other
 }) => {
     return (
-        <div {...other}  className={`scrolling-text-banner ${className}`} style={{backgroundColor, maxWidth: "100%", position: "relative", height, ...style}}>
+        <div {...other}  className={`awvre-scrolling-text-banner ${className}`} style={{backgroundColor, maxWidth: "100%", position: "relative", height, ...style}}>
             <p
                 className="scrolling-text-banner-marquee"
                 style={{
