@@ -1,22 +1,23 @@
 import React from 'react';
 import { SpinnerProps } from './Spinner.types';
+import { motion } from 'framer-motion';
 
 export const Spinner: React.FC<SpinnerProps> = ({
   className,
-  width,
-  height,
+  style,
+  size = 251.65,
 }) => {
   return (
-    <div>
-      <svg
-        id="Group_10"
-        name="Group 10"
+      <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        width={width ?? 251.65}
-        height={height ?? 251.65}
+        width={size}
+        height={size}
         viewBox="0 0 251.65 251.65"
-        className={className}
+        className={`spinner ${className ?? ""}`}
+        animate={{ rotate: 360 }}
+        transition={{ duration: 1.25, repeat: Infinity, ease: "linear" }}
+        style={style}
       >
         <defs>
           <clipPath id="clipPath">
@@ -63,7 +64,6 @@ export const Spinner: React.FC<SpinnerProps> = ({
             </g>
           </g>
         </g>
-      </svg>
-    </div>
+      </motion.svg>
   );
 };

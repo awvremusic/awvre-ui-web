@@ -1,9 +1,5 @@
 export type GridButtonProps = {
-  onClick: () => void;
-  className?: string;
-  disabled?: boolean;
   leftComponent?: React.ReactNode;
   rightComponent?: React.ReactNode;
   children: string | React.ReactNode;
-  backgroundColor?: string;
-} & React.HTMLAttributes<HTMLButtonElement>;
+} & React.HTMLAttributes<HTMLButtonElement> & React.ButtonHTMLAttributes<HTMLButtonElement>;
