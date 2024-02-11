@@ -139,6 +139,7 @@ export enum MediaPlatform {
   X = 'x',
   FACEBOOK = 'facebook',
   INSTAGRAM = 'instagram',
+  VIMEO = 'vimeo',
   UNKNOWN = 'unknown',
 }
 

@@ -28,6 +28,28 @@ const StyledWrapper = styled.main<StyledWrapperProps>`
   background: ${({ $theme }) => $theme.colors.background};
   color: ${({ $theme }) => $theme.colors.font};
   font-family: ${({ $theme }) => $theme.fontFamily};
+
+  * {
+    font-size: 12pt;
+  }
+
+  @media screen and (min-width: 768px) {
+    * {
+      font-size: 14pt;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    * {
+      font-size: 16pt;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    * {
+      font-size: 18pt;
+    }
+  }
 `;
 
 export const AWVREProvider: React.FC<AWVREProviderProps> = ({
