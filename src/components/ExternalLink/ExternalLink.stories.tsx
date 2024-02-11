@@ -11,9 +11,7 @@ const meta: Meta<typeof ExternalLink> = {
 
 export default meta;
 
-export const Primary = (args) => (
-  <ExternalLink data-testId="ExternalLink-id" {...args} />
-);
+export const Primary = (args) => <ExternalLink {...args} />;
 
 Primary.storyName = 'ExternalLink (Default)';
 Primary.args = {

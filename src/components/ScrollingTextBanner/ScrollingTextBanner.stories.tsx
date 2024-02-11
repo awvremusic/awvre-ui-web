@@ -13,9 +13,7 @@ export default meta;
 
 type Story = StoryObj<typeof ScrollingTextBanner>;
 
-export const Primary: Story = (args) => (
-  <ScrollingTextBanner data-testId="ScrollingTextBanner-id" {...args} />
-);
+export const Primary: Story = (args) => <ScrollingTextBanner {...args} />;
 Primary.storyName = 'ScrollingTextBanner (Default)';
 Primary.args = {
   text: 'AWVRE has made some new clothes for you to wear! Check them out now! 🎉',

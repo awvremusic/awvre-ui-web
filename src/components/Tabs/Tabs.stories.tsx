@@ -15,7 +15,7 @@ export default meta;
 
 export const Primary = (args) => (
   <AWVREProvider>
-    <Tabs data-testId="Tabs-id" {...args} />
+    <Tabs {...args} />
   </AWVREProvider>
 );
 

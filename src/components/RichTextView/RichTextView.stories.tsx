@@ -16,7 +16,7 @@ type Story = StoryObj<typeof RichTextView>;
 
 export const Primary: Story = (args) => (
   <AWVREProvider>
-    <RichTextView data-testId="RichTextView-id" {...args} />
+    <RichTextView {...args} />
   </AWVREProvider>
 );
 Primary.storyName = 'RichTextView (Default)';

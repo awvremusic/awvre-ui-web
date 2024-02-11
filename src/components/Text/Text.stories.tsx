@@ -16,7 +16,7 @@ type Story = StoryObj<typeof Text>;
 
 export const Primary: Story = (args) => (
   <AWVREProvider>
-    <Text data-testId="Text-id" {...args} />
+    <Text {...args} />
   </AWVREProvider>
 );
 Primary.storyName = 'Text - Default';
@@ -26,7 +26,7 @@ Primary.args = {
 
 export const Heading1: Story = (args) => (
   <AWVREProvider>
-    <Text data-testId="Text-id" {...args} />
+    <Text {...args} />
   </AWVREProvider>
 );
 
@@ -38,7 +38,7 @@ Heading1.args = {
 
 export const Heading2: Story = (args) => (
   <AWVREProvider>
-    <Text data-testId="Text-id" {...args} />
+    <Text {...args} />
   </AWVREProvider>
 );
 
@@ -50,7 +50,7 @@ Heading2.args = {
 
 export const Heading3: Story = (args) => (
   <AWVREProvider>
-    <Text data-testId="Text-id" {...args} />
+    <Text {...args} />
   </AWVREProvider>
 );
 
@@ -62,7 +62,7 @@ Heading3.args = {
 
 export const Heading4: Story = (args) => (
   <AWVREProvider>
-    <Text data-testId="Text-id" {...args} />
+    <Text {...args} />
   </AWVREProvider>
 );
 
@@ -74,7 +74,7 @@ Heading4.args = {
 
 export const Heading5: Story = (args) => (
   <AWVREProvider>
-    <Text data-testId="Text-id" {...args} />
+    <Text {...args} />
   </AWVREProvider>
 );
 
@@ -86,7 +86,7 @@ Heading5.args = {
 
 export const Heading6: Story = (args) => (
   <AWVREProvider>
-    <Text data-testId="Text-id" {...args} />
+    <Text {...args} />
   </AWVREProvider>
 );
 
@@ -98,7 +98,7 @@ Heading6.args = {
 
 export const Subtitle1: Story = (args) => (
   <AWVREProvider>
-    <Text data-testId="Text-id" {...args} />
+    <Text {...args} />
   </AWVREProvider>
 );
 
@@ -110,7 +110,7 @@ Subtitle1.args = {
 
 export const Subtitle2: Story = (args) => (
   <AWVREProvider>
-    <Text data-testId="Text-id" {...args} />
+    <Text {...args} />
   </AWVREProvider>
 );
 
@@ -122,7 +122,7 @@ Subtitle2.args = {
 
 export const Body1: Story = (args) => (
   <AWVREProvider>
-    <Text data-testId="Text-id" {...args} />
+    <Text {...args} />
   </AWVREProvider>
 );
 
@@ -134,7 +134,7 @@ Body1.args = {
 
 export const Body2: Story = (args) => (
   <AWVREProvider>
-    <Text data-testId="Text-id" {...args} />
+    <Text {...args} />
   </AWVREProvider>
 );
 

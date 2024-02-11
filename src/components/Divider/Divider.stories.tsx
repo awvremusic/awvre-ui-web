@@ -16,7 +16,7 @@ type Story = StoryObj<typeof Divider>;
 
 export const Primary: Story = (args) => (
   <AWVREProvider>
-    <Divider data-testId="Divider-id" {...args} />
+    <Divider {...args} />
   </AWVREProvider>
 );
 

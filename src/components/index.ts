@@ -9,3 +9,5 @@ export * from './AWVREProvider';
 export * from './Tabs';
 export * from './Drawer';
 export * from './Divider';
+export * from './MediaLinkIcon';
+export * from './Container';

@@ -127,3 +127,39 @@ export const AWVRELightTheme: AWVREThemeProperties = {
   ...AWVRESpacingProps,
   ...AWVREFontProps,
 };
+
+export enum MediaPlatform {
+  SPOTIFY = 'spotify',
+  APPLE_MUSIC = 'apple',
+  SOUNDCLOUD = 'soundcloud',
+  YOUTUBE = 'youtube',
+  DISCORD = 'discord',
+  THREADS = 'threads',
+  LINKEDIN = 'linkedin',
+  X = 'x',
+  FACEBOOK = 'facebook',
+  INSTAGRAM = 'instagram',
+  UNKNOWN = 'unknown',
+}
+
+export enum MusicType {
+  ALBUM = 'Album',
+  SINGLE = 'Single',
+  EP = 'EP',
+  MIXES = 'Mixes',
+}
+
+export enum ZodianSigns {
+  ARIES = 'Aries',
+  TAURUS = 'Taurus',
+  GEMINI = 'Gemini',
+  CANCER = 'Cancer',
+  LEO = 'Leo',
+  VIRGO = 'Virgo',
+  LIBRA = 'Libra',
+  SCORPIO = 'Scorpio',
+  CAPRICORN = 'Capricorn',
+  AQUARIUS = 'Aquarius',
+  PISCES = 'Pisces',
+  SAGITTARIUS = 'Sagittarius',
+}

@@ -22,7 +22,7 @@ type Story = StoryObj<typeof Spinner>;
 
 export const Primary: Story = (args) => (
   <AWVREProvider>
-    <Spinner data-testId="Spinner-id" {...args} />
+    <Spinner {...args} />
   </AWVREProvider>
 );
 

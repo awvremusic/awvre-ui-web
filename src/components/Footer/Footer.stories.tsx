@@ -14,9 +14,7 @@ export default meta;
 
 type Story = StoryObj<typeof Footer>;
 
-export const Primary: Story = (args) => (
-  <Footer data-testId="Footer-id" {...args} />
-);
+export const Primary: Story = (args) => <Footer {...args} />;
 Primary.storyName = 'Footer (Default)';
 Primary.args = {
   children: (
@@ -28,9 +26,7 @@ Primary.args = {
   backgroundColor: AWVRE_GREEN,
 };
 
-export const Custom: Story = (args) => (
-  <Footer data-testId="Footer-id" {...args} />
-);
+export const Custom: Story = (args) => <Footer {...args} />;
 Custom.storyName = 'Footer (Custom)';
 Custom.args = {
   children: 'Made custom',
