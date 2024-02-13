@@ -10,7 +10,7 @@ type StyledGridButtonProps = {
 
 const StyledGridButton = styled.button<StyledGridButtonProps>`
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 2fr 3fr 2fr;
   gap: ${({ $theme }) => $theme.spacing.sm};
   justify-content: center;
   align-items: center;
@@ -19,10 +19,17 @@ const StyledGridButton = styled.button<StyledGridButtonProps>`
   border-radius: ${({ $theme }) => $theme.borderRadius.sm};
   background-color: ${({ $theme }) => $theme.colors.primary};
   color: white;
-  font-weight: ${({ $theme }) => $theme.fontWeights.bold};
   cursor: pointer;
   transition: all 0.3s;
   border: none;
+  font-size: ${({ $theme }) => $theme.fontSizes.base};
+  font-weight: ${({ $theme }) => $theme.fontWeights.semibold};
+  font-family: ${({ $theme }) => $theme.fontFamily.sansSerif};
+
+  * {
+    font-size: inherit;
+    font-weight: inherit;
+  }
 
   &:hover {
     opacity: 0.8;
@@ -40,12 +47,14 @@ export const Button: React.FC<ButtonProps> = ({
   leftComponent,
   rightComponent,
   children,
+  style,
   ...other
 }) => {
   const { theme } = useAWVRETheme();
   return (
     <StyledGridButton
       $theme={theme}
+      style={style}
       {...other}
       className={`awvre-button ${className ?? ''}`}
       onClick={onClick}

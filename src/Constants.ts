@@ -92,7 +92,7 @@ export const AWVRESpacingProps: AWVREThemeSpacingProperties = {
 export const AWVREFontProps = {
   fontFamily: {
     sansSerif:
-      'Noto Sans JP, Noto Sans, Inter, Roboto, Calibri, Arial, sans-serif',
+      '"M PLUS 2", "Noto Sans JP", "Noto Sans", "Inter", "Roboto", "Calibri", "Arial", sans-serif',
     serif: 'Noto Serif, Times New Roman, Times, Georgia, serif',
     monospace: 'Noto Mono, Courier New, Courier, monospace',
   },

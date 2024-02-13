@@ -22,6 +22,7 @@ export const Primary = (args) => (
 
 Primary.storyName = 'Button (Default)';
 Primary.args = {
+  style: { margin: '10px' },
   children: 'Test Button',
   leftComponent: <div>Left Component ☀️</div>,
   rightComponent: <div>Right Component 🌑</div>,
