@@ -11,3 +11,4 @@ export * from './Drawer';
 export * from './Divider';
 export * from './MediaLinkIcon';
 export * from './Container';
+export * from './AWVRENameLogoV1';
