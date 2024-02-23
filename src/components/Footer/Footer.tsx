@@ -24,6 +24,7 @@ export const Footer: React.FC<FooterProps> = ({
         flexFlow: 'row',
         justifyContent: 'center',
         alignItems: 'center',
+        ...style,
       }}
     >
       <motion.div

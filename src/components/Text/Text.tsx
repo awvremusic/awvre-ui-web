@@ -102,12 +102,12 @@ export const Text = (props: TextProps) => {
   return React.createElement(Component.component, {
     children,
     className: `awvre-text ${other.className ?? ''}`,
+    ...other,
     style: {
       ...Component.style,
       margin: 0,
       fontFamily: theme.fontFamily,
       ...other.style,
     },
-    ...other,
   });
 };
