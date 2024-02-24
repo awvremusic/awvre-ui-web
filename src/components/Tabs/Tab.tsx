@@ -53,6 +53,7 @@ export const Tab = (props: DesktopNavigationTabProps) => {
     rightComponent,
     indicatorClassName,
     indicatorStyle,
+    component,
     ...other
   } = props;
   const { onTabPress, activeTab } = useTabs();
@@ -65,6 +66,17 @@ export const Tab = (props: DesktopNavigationTabProps) => {
 
     onTabPress(value);
   };
+
+  if (component) {
+    const clonedComponent = React.cloneElement(
+      component as React.ReactElement<any>,
+      {
+        onClick: handleClick,
+      }
+    );
+
+    return clonedComponent;
+  }
 
   return (
     <StyledTab

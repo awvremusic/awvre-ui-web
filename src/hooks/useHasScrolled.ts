@@ -4,6 +4,7 @@ export const useHasScrolled = () => {
   const [hasScrolled, setHasScrolled] = React.useState(false);
 
   React.useEffect(() => {
+    if (window === undefined) return;
     const onScroll = () => {
       if (window.scrollY > 0) {
         setHasScrolled(true);

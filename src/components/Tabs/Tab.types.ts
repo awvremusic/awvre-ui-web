@@ -5,6 +5,7 @@ export interface TabProps extends React.HTMLAttributes<HTMLDivElement> {
   rightComponent?: React.ReactNode;
   indicatorClassName?: string;
   indicatorStyle?: React.CSSProperties;
+  component?: React.ReactNode;
 }
 
 export interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {

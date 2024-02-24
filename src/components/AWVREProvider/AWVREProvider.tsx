@@ -71,33 +71,37 @@ export const AWVREProvider: React.FC<AWVREProviderProps> = ({
   const theme = themeMode === 'light' ? lightTheme : darkTheme;
 
   React.useEffect(() => {
-    //Loads font from Google Fonts
-    if (document.querySelector('.awvre-google-fonts-api-preconnect') === null) {
-      const googleApiLink = document.createElement('link');
-      googleApiLink.href = 'https://fonts.googleapis.com';
-      googleApiLink.rel = 'preconnect';
-      googleApiLink.classList.add('awvre-google-fonts-api-preconnect');
-      document.head.appendChild(googleApiLink);
-    }
+    if (document) {
+      //Loads font from Google Fonts
+      if (
+        document.querySelector('.awvre-google-fonts-api-preconnect') === null
+      ) {
+        const googleApiLink = document.createElement('link');
+        googleApiLink.href = 'https://fonts.googleapis.com';
+        googleApiLink.rel = 'preconnect';
+        googleApiLink.classList.add('awvre-google-fonts-api-preconnect');
+        document.head.appendChild(googleApiLink);
+      }
 
-    if (
-      document.querySelector('.awvre-google-fonts-static-preconnect') === null
-    ) {
-      const googleStaticLink = document.createElement('link');
-      googleStaticLink.href = 'https://fonts.gstatic.com';
-      googleStaticLink.rel = 'preconnect';
-      googleStaticLink.crossOrigin = 'anonymous';
-      googleStaticLink.classList.add('awvre-google-fonts-static-preconnect');
-      document.head.appendChild(googleStaticLink);
-    }
+      if (
+        document.querySelector('.awvre-google-fonts-static-preconnect') === null
+      ) {
+        const googleStaticLink = document.createElement('link');
+        googleStaticLink.href = 'https://fonts.gstatic.com';
+        googleStaticLink.rel = 'preconnect';
+        googleStaticLink.crossOrigin = 'anonymous';
+        googleStaticLink.classList.add('awvre-google-fonts-static-preconnect');
+        document.head.appendChild(googleStaticLink);
+      }
 
-    if (document.querySelector('.awvre-google-fonts') === null) {
-      const link = document.createElement('link');
-      link.href =
-        'https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&display=swap';
-      link.rel = 'stylesheet';
-      link.classList.add('awvre-google-fonts');
-      document.head.appendChild(link);
+      if (document.querySelector('.awvre-google-fonts') === null) {
+        const link = document.createElement('link');
+        link.href =
+          'https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&display=swap';
+        link.rel = 'stylesheet';
+        link.classList.add('awvre-google-fonts');
+        document.head.appendChild(link);
+      }
     }
   }, []);
 
