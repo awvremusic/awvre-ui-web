@@ -3,7 +3,7 @@ export * from './Spinner';
 export * from './Button';
 export * from './RichTextView';
 export * from './Text';
-export * from './ScrollingTextBanner';
+export * from './Marquee';
 export * from './ExternalLink';
 export * from './AWVREProvider';
 export * from './Tabs';

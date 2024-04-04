@@ -19,6 +19,10 @@ const awvreThemeContext = React.createContext<
 >(undefined);
 
 const GlobalStyles = createGlobalStyle<{ $theme: AWVREThemeProperties }>`
+  :root {
+    --marquee-width: 100%;
+  }
+
   * {
     font-family: ${({ $theme }) => $theme.fontFamily.sansSerif};
     font-size: 10pt;
@@ -39,6 +43,15 @@ const GlobalStyles = createGlobalStyle<{ $theme: AWVREThemeProperties }>`
   @media screen and (min-width: 1440px) {
     * {
       font-size: 16pt;
+    }
+  }
+
+  @keyframes slideMarqueeText {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: -var(--marquee-width);
     }
   }
 `;

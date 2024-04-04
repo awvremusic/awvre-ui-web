@@ -1,7 +1,6 @@
 import { HTMLAttributes } from 'react';
 
-export interface ScrollingTextBannerProps
-  extends HTMLAttributes<HTMLDivElement> {
+export interface MarqueeProps extends HTMLAttributes<HTMLDivElement> {
   text: string;
   textColor?: string;
   backgroundColor?: string;
